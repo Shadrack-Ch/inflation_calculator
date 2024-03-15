@@ -1,0 +1,29 @@
+[package]
+name = "inflation_calculator"
+version = "0.1.0"
+edition = "2018"
+description = "A tool to calculate inflation-adjusted amounts between different years"
+license = "MIT"  # or your preferred license
+
+# Dependencies section
+[dependencies]
+# Common dependencies for your project. 
+# Example: reqwest for HTTP requests, serde for JSON handling, etc.
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+# Add more dependencies as required
+
+# Binary targets
+[[bin]]
+name = "inflation_calculator_cli"
+path = "src/cli/main.rs"
+
+[[bin]]
+name = "inflation_calculator_gui"
+path = "src/gui/main.rs"
+
+# Library target
+[lib]
+path = "src/lib.rs"
+
+# (Optional) Configure more settings as per your requirement.
